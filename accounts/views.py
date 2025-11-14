@@ -74,6 +74,6 @@ class EndSession(LogoutView):
 
     def dispatch(self, request, *args, **kwargs):
         # this method will redirect the user to login page which is index
-        response = super().dispatch(request, *args, **kwargs)
+        logout_func(request)
         return redirect('index')
 
