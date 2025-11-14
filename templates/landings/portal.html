@@ -130,7 +130,7 @@
     <!-- Using a form with POST method for logout to protect against CSRF -->
     <form method="post" action="{% url 'logout' %}">
       {% csrf_token %}
-      <button type="submit">Logout</button>
+      <button type="submit" class="logout-link"><h3>Logout?</h3></button>
     </form>
     {% endif %}
     <br />
